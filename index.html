@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stopwatch</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="https://kit.fontawesome.com/32a2bf73d9.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<p class="info">
+				<i class="fas fa-question"></i>
+			</p>
+
+			<div class="color-mode">
+				<label class="switch">
+					<input type="checkbox" />
+					<span class="slider"></span>
+				</label>
+				<!-- <label class="switch">
+					<input type="checkbox" checked />
+					<span class="slider"></span>
+				</label> -->
+			</div>
+
+			<h1>Stopwatch</h1>
+			<p class="stopwatch">0:00</p>
+			<p class="time">0:00</p>
+
+			<div class="buttons">
+				<button class="start"><i class="fas fa-play"></i></button>
+				<button class="pause"><i class="fas fa-pause"></i></button>
+				<button class="stop"><i class="fas fa-stop"></i></button>
+				<button class="reset"><i class="fas fa-times"></i></button>
+				<button class="archive">archive</button>
+			</div>
+
+			<ul class="time-list"></ul>
+		</div>
+
+		<div class="modal-shadow">
+			<div class="modal">
+				<h3>
+					<p><i class="fas fa-play"></i> - start</p>
+					<p><i class="fas fa-pause"></i> - pause</p>
+					<p><i class="fas fa-stop"></i> - stop</p>
+					<p><i class="fas fa-times"></i> - delete everything (including the archive)</p>
+					<p><strong>archive</strong> - check previous results</p>
+
+					<button class="close">close</button>
+				</h3>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
