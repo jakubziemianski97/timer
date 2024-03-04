@@ -12,9 +12,9 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   min-height: 100vh;
   font-family: "Orbitron", sans-serif;
   background-color: var(--second-color);
@@ -23,9 +23,9 @@ body {
 .wrapper {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding: 50px;
   width: 700px;
   border: 3px solid var(--first-color);
@@ -35,15 +35,14 @@ body {
 
 .info {
   position: absolute;
+  padding: 10px;
   top: 15px;
   right: 32px;
-  padding: 10px;
   font-size: 24px;
   color: var(--first-color);
   cursor: pointer;
   transition: color 0.3s, scale 0.3s;
 }
-
 .info:hover {
   color: var(--third-color);
   scale: 0.95;
@@ -51,16 +50,16 @@ body {
 
 .color-mode {
   position: absolute;
+  padding: 10px;
   top: 70px;
   right: 0;
-  padding: 10px;
 }
 .color-mode .switch {
   position: relative;
   display: inline-block;
+  margin: 0 10px;
   width: 60px;
   height: 30px;
-  margin: 0 10px;
   transition: transform 0.5s, background-color 0.5s;
 }
 .color-mode .switch input[type=checkbox] {
@@ -74,7 +73,6 @@ body {
 }
 .color-mode .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
@@ -83,14 +81,15 @@ body {
   border: 1px solid var(--first-color);
   border-radius: 15px;
   overflow: hidden;
+  cursor: pointer;
   z-index: 0;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
   width: 20px;
+  height: 20px;
   left: 5px;
   bottom: 4px;
   background-color: var(--first-color);
@@ -178,12 +177,12 @@ button:focus {
 
 .modal {
   position: absolute;
+  padding: 30px 60px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
   height: 380px;
-  padding: 30px 60px;
   border-radius: 30px;
   background-color: var(--second-color);
 }

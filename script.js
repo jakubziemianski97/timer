@@ -19,6 +19,7 @@ let minutes = 0
 let seconds = 0
 let timesArr = []
 
+// START OF THE STOPWATCH COUNTDOWN
 const handleStart = () => {
 	clearInterval(countTime)
 
@@ -37,10 +38,12 @@ const handleStart = () => {
 	}, 1000)
 }
 
+// PAUSING THE STOPWATCH COUNTDOWN
 const handlePause = () => {
 	clearInterval(countTime)
 }
 
+// STOPPING THE MEASUREMENT
 const handleStop = () => {
 	time.innerHTML = `Ostatni czas: ${stopwatch.textContent}`
 
@@ -51,6 +54,7 @@ const handleStop = () => {
 	clearStuff()
 }
 
+// RESETTING THE CURRENT MEASUREMENT AND ARCHIVE
 const handleReset = () => {
 	time.style.visibility = 'hidden'
 	timesArr = []
@@ -65,6 +69,7 @@ const clearStuff = () => {
 	minutes = 0
 }
 
+// SHOWING ARCHIVE
 const showArchive = () => {
 	timeList.textContent = ''
 	let num = 1
@@ -78,6 +83,7 @@ const showArchive = () => {
 	})
 }
 
+// SHOWING INSTRUCTION
 const showModal = () => {
 	if (!(modalShadow.style.display === 'block')) {
 		modalShadow.style.display = 'block'
@@ -88,6 +94,7 @@ const showModal = () => {
 	modalShadow.classList.toggle('modal-animation')
 }
 
+// CHANGING TO LIGHT/DARK MODE
 const toggleColorMode = () => {
 	if (checkbox.checked) {
 		changeStyleToDark()
@@ -107,6 +114,7 @@ const changeStyleToDark = () => {
 	root.style.setProperty('--third-color', 'lightgrey')
 }
 
+// FUNCTION CALL
 startBtn.addEventListener('click', handleStart)
 pauseBtn.addEventListener('click', handlePause)
 stopBtn.addEventListener('click', handleStop)
