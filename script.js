@@ -45,7 +45,7 @@ const handlePause = () => {
 
 // STOPPING THE MEASUREMENT
 const handleStop = () => {
-	time.innerHTML = `Ostatni czas: ${stopwatch.textContent}`
+	time.innerHTML = `Last result: ${stopwatch.textContent}`
 
 	if (stopwatch.textContent !== '0:00') {
 		time.style.visibility = 'visible'
@@ -76,7 +76,7 @@ const showArchive = () => {
 
 	timesArr.forEach(time => {
 		const newTime = document.createElement('li')
-		newTime.innerHTML = `Pomiar nr ${num}: &nbsp; <span>${time}</span>`
+		newTime.innerHTML = `Measure no. ${num}: &nbsp; <span>${time}</span>`
 
 		timeList.appendChild(newTime)
 		num++
