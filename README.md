@@ -1,1 +1,1 @@
-	An application allowing you to measure time and save all the results in an archive. Stopwatch allows you to stop and resume the measurement, reset the measurement and clear the archive. Also included is the ability to change the theme to dark or light.
+
